@@ -1,3 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100vh;
+    background-color: bisque;
+    
+}
+nav {
+    background-color: rgb(19, 19, 19);
+    margin-top: 0;
+}
+.navbar {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.navbar div {
+    margin-right: 50px;
+}
+.navbar div a {
+    font-size: 35px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+    margin: 15px;
+    color: rgb(255, 255, 255);
+    transition: 0.5s ease-in-out;
+}
+
+.navbar div a:hover {
+    color: rgb(89, 255, 0);
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.navbar a img {
+    width: 120px;
+    height: auto;
+    margin-left: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .d1 {
     display: inline-block;
     background-color: rgb(69, 19, 112);
