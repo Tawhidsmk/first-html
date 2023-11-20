@@ -2,6 +2,7 @@
 *{
     margin: 0;
     padding: 0;
+    -webkit-font-smoothing: subpixel-antialiased;
 }
 
 .container{
@@ -28,8 +29,9 @@
 }
 .container .logo a{
     text-decoration: none;
-    font-size: 40px;
-    font-family: serif;
+    font-size: 3.5rem;
+    font-weight: 600;
+    font-family: Robotto;
     color: #f3f3f3;
 
 }
