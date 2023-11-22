@@ -2,6 +2,10 @@
     padding: 0;
     margin: 0;
 }
+body {
+    width: 100vw;
+    height: 100vh;
+}
 header {
     width: 100%;
     height: 10%;
@@ -35,7 +39,7 @@ header ul li a img {
 
 nav {
     width: 100%;
-    height: 5%;
+    height: 10%;
     background: black;
     
 
@@ -57,9 +61,9 @@ nav ul li {
 }
 
 #main {
-    background-color: rgb(232, 148, 38);
+    background-color: rgb(234, 146, 32);
     width: 100%;
-    height: 70%;
+    height: 65%;
 }
 
 #main aside {
@@ -82,4 +86,33 @@ nav ul li {
 #main article img {
     width: 300px;
     height: 300px;
+}
+/* footer  */
+footer {
+    width: 100vw;
+    height: 20%;
+    background-color: #b4b4b4cf;
+}
+
+footer #logo {
+    width: 6rem;
+    height: 3rem;
+    margin: 3rem;
+}
+footer #ul1 {
+    display: inline;
+
+}
+
+footer ul li{
+    display: inline;
+
+}
+
+footer div {
+    display: inline;
+}
+
+footer div ul {
+    display: inline;
 }
