@@ -1,10 +1,14 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Poppins:wght@300&family=Roboto:wght@100&display=swap');
 * {
     margin: 0; 
     padding: 0;
     box-sizing: border-box;
-    font-size: 20px;
 }
-
+body {
+    font-size: 100%;
+}
 
 div {
     display: none;
@@ -20,7 +24,26 @@ div {
 
 }
 p {
-    text-decoration: underline 30px red wavy;
-    /* visibility:hidden; */
+    font-size: 2em;
     display: none;
 }
+
+#span {
+    font-family: sans-serif;
+    font-size: 3em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-image: linear-gradient(gold, gold);
+    background-size: 100% 10px;
+    background-repeat: no-repeat;
+    background-position: 100% 0%;
+     transition: background-size .7s, background-position .5s ease-in-out;
+  }
+  
+  #span:hover {
+    background-size: 100% 100%;
+    background-position: 0% 100%;
+    transition: background-position .7s, background-size .5s ease-in-out;
+  }
