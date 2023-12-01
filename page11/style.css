@@ -10,7 +10,7 @@ body {
 .container {
     width: 600px;
     height: 500px;
-    border: 1px solid red;
+    border: 1px solid rgb(255, 137, 137);
     position:sticky;
 }
 .box {
@@ -22,13 +22,13 @@ body {
 }
 
 #d1{
-    background-color: aqua;
+    background-color: rgb(149, 255, 255);
     position: relative;
     z-index: 1;
 }
 
 #d2{
-    background-color: rgb(81, 255, 0);
+    background-color: rgb(175, 255, 138);
     position: relative;
     left: 40px;
     top:-40px;
@@ -43,7 +43,7 @@ body {
 }
 
 #d3{
-    background-color: rgb(13, 0, 255);
+    background-color: rgb(110, 103, 255);
     position: absolute;
     left: 50%;
     top: 50%;
@@ -52,7 +52,7 @@ body {
 }
 
 #d4{
-    background-color: rgb(255, 0, 166);
+    background-color: rgb(255, 156, 220);
     position: relative;
     left: 120px;
     top: -120px;
@@ -60,7 +60,7 @@ body {
 }
 
 #d5{
-    background-color: rgb(255, 183, 0);
+    background-color: rgb(255, 223, 141);
     position: relative;
     left: 160px;
     top:-160px;
