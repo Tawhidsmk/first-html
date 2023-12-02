@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.card{
+    width: 200px;
+    height: 200px;
+    border: 1px solid rgba(60, 60, 60, 0.889);
+    margin: 30px;
+    display: inline-block;
+}
+.card:hover{
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.573);
+    
+}
+.cardImg {
+    width: 100%;
+    height: 60%;
+    object-position: center;
+    object-fit: cover;    
+}
+
+.cardP{
+    font-size: 14px;
+    text-align: center;
+    padding-top: 15px;
+}
