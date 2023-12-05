@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -10,7 +11,7 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-
+    overflow: hidden;
 }
 
 .container {
@@ -29,20 +30,30 @@ body {
 
 .head h1 {
     font-size: 40px ;
-    color: white;
+    color: rgba(230, 230, 230, 0.943);
     font-weight: bold;
-    font-family: serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin-bottom: 20px;
     text-align: center;
 
 }
 .head p {
     font-size: 15px;
-    color: white;
+    color: rgba(190, 190, 190, 0.874);
     font-family: sans-serif;
     margin-bottom: 20px;
     text-align: center;
 
+}
+
+a {
+    text-decoration: none;
+    color: rgba(196, 123, 27, 0.822);
+    transition: 0.5s;
+}
+
+a:hover{
+    text-shadow: 1px 1px 5px rgba(196, 123, 27, 0.822);
 }
 
 .button {
@@ -53,18 +64,31 @@ body {
 }
 
 .button button {
-    background-color: rgb(174, 127, 65);
+    background-color: rgba(196, 123, 27, 0.822);
     padding: 5px 10px;
     border-radius: 10px;
-    color: white;
-    border: 1px solid white;
+    color: rgba(230, 230, 230, 0.943);
+    border: 1px solid rgba(101, 101, 101, 0.475);
     margin-right: 20px;
     font-size: 20px;
+    font-family: fantasy;
+    box-shadow: -2px 2px 10px rgb(0, 0, 0);
+    transition: 0.5s;
 
+}
+.button button:hover {
+    background-color: rgb(196, 123, 27);
+    box-shadow: 3px 0px 10px rgba(196, 123, 27, 0.888);
 }
 
 #button2 {
     background: transparent;
+    transition: 0.5s;
+}
+
+#button2:hover {
+    background-color: rgba(196, 123, 27, 0.822);
+    box-shadow: 3px 0px 10px rgba(196, 123, 27, 0.888);
 }
 
 .cards {
@@ -81,27 +105,34 @@ body {
     margin: 20px;
     width: 200px;
     height: 200px;
-    background-color: rgb(174, 127, 65);
+    background-color: rgba(196, 123, 27, 0.865);
     border-radius: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-shadow: -1px 1px 10px black;
 }
 
-
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
-}
-.card span {
-    size: 100px;
-}
 .card h3 {
-    font-family:sans-serif;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 25px;
-    color: white;
+    color: rgba(230, 230, 230, 0.943);
+}
+
+
+
+/* -------custom scrollbar ------- */
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background: rgba(128, 128, 128, 0.92);
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+    border-radius: 15px;
+    height: 10px;
 }
