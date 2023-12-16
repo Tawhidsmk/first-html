@@ -62,8 +62,22 @@ body{
 .card:nth-child(3) .card-image{
     background-image: url(../page21/images/bmw.jpg);
 }
-.card:hover{
-    background: #43c2e8;
+
+.card:nth-child(1):hover{
+    background: #c32121d6;
+    color: #fff;
+    box-shadow: 0px 0px 11px 5px #000000;
+
+}
+.card:nth-child(2):hover{
+    background: #2aae23db;
+    color: #fff;
+    box-shadow: 0px 0px 11px 5px #000000;
+
+}
+
+.card:nth-child(3):hover{
+    background: #1993b8e0;
     color: #fff;
     box-shadow: 0px 0px 11px 5px #000000;
 

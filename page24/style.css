@@ -1,0 +1,257 @@
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    margin: 0;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 13%;
+    background:transparent;
+    transition: all ease .50s; 
+    z-index: 1000;
+}
+
+.logo{
+    font-size: 32px;
+    color: #fff;
+    font-weight: 600;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.navlist{
+    display: flex;
+
+}
+.navlist a{
+    margin: 0 30px;
+    padding: 2px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    transition: all ease .50s;
+}
+
+.navlist a:hover{
+    border-bottom: 2px solid #fff;
+    text-shadow: 0 0 10px #fff;
+}
+.navlist a.active{
+    border-bottom: 2px solid #fff;
+
+}
+
+.right-nav{
+    display: flex;
+    align-items: center;
+}
+
+.h-btn{
+    display: inline-block;
+    padding: 9px 20px;
+    border: 1px solid #f5dca8;
+    line-height: 1.4;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 30px;
+    margin-right: 20px;
+    color: #fff;
+    transition: all ease .50s;
+}
+
+.h-btn:hover{
+    transform: scale(1.06);
+    color: #000;
+    background: #fff;
+    border: 1px solid #fff;
+}
+.carousel{
+    width: 100vw;
+    height: 105.7vh;
+    position: relative;
+    overflow: hidden;
+    margin-top: -40px;
+
+}
+
+.list{
+    width: 100%;
+    height: 100%;
+
+}
+
+.item{
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.item img.fruit{
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 15;
+    pointer-events: none;
+
+}
+
+.item .content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 12rem;
+    color: #eee;
+    font-weight: bold;
+    font-family: system-ui;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+
+}
+
+.item{
+    display: none;
+}
+
+.item.active{
+    display: block;
+}
+
+.item.hidden{
+    display: block;
+    pointer-events: none;
+    background: transparent;
+    z-index: 1;
+    
+}
+
+@keyframes toActive{
+    from{
+        top: 100%;
+        opacity: 0;
+    }
+}
+
+@keyframes toOut{
+    from{
+        top: 50%;
+        opacity: 1;
+    }
+}
+
+.item.item.active img.fruit{
+    animation: toActive .5s ease-in-out 1;
+
+}
+
+.item.hidden img.fruit{
+    animation: toOut .8s ease-in-out 1;
+    top: -100%;
+    opacity: 0;
+}
+
+.item.active .content{
+    animation:  toActive .8s ease-in-out 1;
+
+}
+
+.item.hidden .content{
+    opacity: 0;
+}
+
+:root{
+    --whidth-mockup: calc(371px / 1.5);
+    --height-mockup: calc(673px / 1.5);
+}
+
+.mockup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    --left: 0;
+    transform: translate(-50%, -50%);
+    width: var(--whidth-mockup);
+    height: var(--height-mockup);
+    background: 
+    url(images24/mockup.png) 0 0 no-repeat,
+    url(images24/listSoda.jpg)var(--left);
+    background-size: auto 100%;
+    background-blend-mode: multiply;
+    mask-image: url(images24/mockup.png);
+    -webkit-mask-image: url(images24/mockup.png);
+    -webkit-mask-repeat: no-repeat;
+    mask-size: auto 100%;
+    -webkit-mask-size: auto 100%;
+    transition: background .5s;
+}
+
+.leaves{
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    background-image: url(images24/leaves.png);
+    background-size: 100%;
+    top: calc(50% - (var(--height-mockup) / 1.7));
+    left: calc(50% - (var(--whidth-mockup) / 5));
+}
+
+.shadow{
+    width: var(--whidth-mockup);
+    height: 100px;
+    background-color: #0008;
+    border-radius: 50%;
+    position: absolute;
+    top: calc(50% + (var(--height-mockup) / 2));
+    left: 50%;
+    transform: translatex(-50%);
+    filter: blur(20px);
+
+}
+
+#prev,
+#next{
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #eee5;
+    border: 1px solid #eee9;
+    color: #eee;
+    font-size: x-large;
+    font-weight: bold;
+    font-family: monospace;
+    cursor: pointer;
+    z-index: 15;
+
+}
+
+#prev{
+    left: 20px;
+
+}
+
+#next{
+    right: 20px;
+}
