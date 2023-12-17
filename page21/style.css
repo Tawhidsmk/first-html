@@ -91,7 +91,7 @@ button{
 
 button:hover{
     text-shadow: 0 0 10px #fff;
-    transform: translatex(10px)
+    transform: translatex(10px);
 }
 .card{
     width: 200px;
