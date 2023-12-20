@@ -27,15 +27,22 @@ body{
     color: #222;
     text-decoration: none;
     font-weight: 600;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
 }
 
 .navbar a {
+    display: inline-block;
     font-size: 18px;
     color: #222;
     text-decoration: none;
     font-weight: 500;
     margin: 0 20px;
     transition: .3s;
+    font-weight: 600;
+    opacity: 0;
+    animation: slidetop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
 }
 
 .navbar a:hover,
@@ -62,15 +69,18 @@ body{
     text-decoration: none;
     transform: rotate(45deg);
     transition: .5s;
+    opacity: 0;
+    animation: slideSci .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
 }
 
 .social-media a:hover{
-    border-color: red;
+    border-color: #eaeaea;
 }
 
 .social-media a i{
     font-size: 24px;
-    color: red;
+    color: #eaeaea;
     transform: rotate(-45deg);
 
 }
@@ -95,16 +105,25 @@ body{
 .home-content h1 {
     font-size: 50px;
     line-height: 1.2;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: 1s;
 }
 
 .home-content h3 {
     font-size: 40px;
     color: #1743e3;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1.3s;
 }
 
 .home-content p{
     font-size: 16px;
     margin: 15px 0 30px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1.6s;
 }
 
 .btn{
@@ -119,6 +138,9 @@ body{
     text-decoration: none;
     font-weight: 600;
     transition: .5s;
+    opacity: 0;
+    animation: slidetop 1s ease forwards;
+    animation-delay: 2s;
 }
 
 .btn:hover{
@@ -140,7 +162,12 @@ body{
     height: 100%;
     background: #eaeaea;
     border: 25px solid #1743e3;
+    box-shadow: -15px 15px 15px rgba(0, 0, 0, .2);
+    opacity: 0;
+    animation: zoomOut 1s ease forwards;
+    animation-delay: 1.6s;
 }
+
 
 .home-img .rhombus img{
     position: absolute;
@@ -148,5 +175,126 @@ body{
     left: -350px;
     max-width: 900px;
     transform: rotate(-45deg);
+    opacity: 0;
+    animation: car 1s ease forwards;
+    animation-delay: 2s;
     
 }
+
+.home .rhombus2{
+    position: absolute;
+    top: -25%;
+    right: -25%;
+    width: 700px;
+    height: 700px;
+    background: #1743e3;
+    transform: rotate(45deg);
+    z-index: -15;
+    opacity: 0;
+    animation: rhombus2 1s ease forwards;
+}
+
+@keyframes slideRight {
+    0% {
+        
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slidetop {
+    0% {
+        
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideSci {
+    0% {
+        
+        transform: translatex(100px) rotate(45deg);
+        opacity: 0;
+    }
+    100% {
+        
+        transform: translateX(0) rotate(45deg);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomOut {
+    0% {
+        
+        transform: scale(1.1);
+        opacity: 0;
+    }
+    100% {
+        
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes car {
+    0% {
+        
+        transform: translate(300px, -300px) scale(0) rotate(-45deg);
+        opacity: 0;
+    }
+    100% {
+        
+        transform: translate(0px, 0) scale(1) rotate(-45deg);
+        opacity: 1;
+    }
+}
+
+@keyframes rhombus2 {
+    0% {
+        
+        right: -40%;
+        opacity: 0;
+    }
+    100% {
+        
+        right: -25%;
+        opacity: 1;
+    }
+}
+
